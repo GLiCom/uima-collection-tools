@@ -1,14 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<parent>
-		<artifactId>uima-pears</artifactId>
-		<groupId>org.barcelonamedia.uima</groupId>
-		<version>0.1.5</version>
-	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>SolrCollectionReader</artifactId>
 	<name>SolrCollectionReader</name>
-	<version>0.1.1</version>
+	<version>0.2.0</version>
 
 	<repositories>
 	</repositories>
@@ -46,7 +41,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>org.barcelonamedia.uima.reader.solr.SolrCollectionReader</mainClass>
+							<mainClass>edu.upf.glicom.uima.reader.solr.SolrCollectionReader</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -65,4 +60,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<groupId>edu.upf.glicom.uima</groupId>
 </project>

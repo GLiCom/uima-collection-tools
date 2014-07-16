@@ -1,4 +1,4 @@
-package org.barcelonamedia.uima.reader.solr;
+package edu.upf.glicom.uima.reader.solr;
 
 import java.io.IOException;
 import java.util.ArrayList;

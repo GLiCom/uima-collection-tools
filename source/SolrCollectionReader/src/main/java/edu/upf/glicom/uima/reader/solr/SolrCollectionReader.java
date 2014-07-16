@@ -14,8 +14,9 @@
  *  limitations under the License.
  */
 
-package org.barcelonamedia.uima.reader.solr;
+package edu.upf.glicom.uima.reader.solr;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
@@ -31,9 +32,10 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 import org.apache.uima.util.ProgressImpl;
-
 import org.uimafit.component.CasCollectionReader_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.factory.CollectionReaderFactory;
+import org.xml.sax.SAXException;
 
 public class SolrCollectionReader extends CasCollectionReader_ImplBase{
 
@@ -139,4 +141,18 @@ public class SolrCollectionReader extends CasCollectionReader_ImplBase{
 
 	public void close() throws IOException {
 	}
+	
+	
+	/**
+	 * return example descriptor (XML) when calling main method
+	 * @param args not used
+	 * @throws ResourceInitializationException
+	 * @throws FileNotFoundException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
+	public static void main(String[] args) throws ResourceInitializationException, FileNotFoundException, SAXException, IOException {
+		CollectionReaderFactory.createDescription(SolrCollectionReader.class).toXML(System.out);
+	}
+
 }
